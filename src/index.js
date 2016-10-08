@@ -6,7 +6,7 @@ var Title = React.createClass({
   render() {
     return (
       div(null,
-        h1(null, 'Hello World Class')
+        h1(null, this.props.title)
       )
     )
   }
@@ -14,7 +14,7 @@ var Title = React.createClass({
 
 var HelloWorld = (
   div( null,
-    React.createElement(Title, null)
+    React.createElement(Title, {title: 'Hello World Class'})
   )
 )
 
