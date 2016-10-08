@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/SeattleFeministJS/React-Workshop/issues"
   },
-  "homepage": "https://github.com/SeattleFeministJS/React-Workshop#readme"
+  "homepage": "https://github.com/SeattleFeministJS/React-Workshop#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0"
+  }
 }
