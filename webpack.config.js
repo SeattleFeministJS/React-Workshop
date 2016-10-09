@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const projectRoot = path.join(__dirname, '../')
+const projectRoot = path.join(__dirname)
 const assetPath = path.join(projectRoot, 'dist')
 
 
@@ -27,14 +27,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.css/,
-        loaders: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(json)$/,
-        loader: 'json-loader'}
+      }
     ]
   }
 }
