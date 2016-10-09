@@ -5,17 +5,11 @@ var h1 = React.DOM.h1
 var Title = React.createClass({
   render() {
     return (
-      div(null,
-        h1(null, this.props.title)
-      )
-    )
+      <div><h1>{this.props.title}</h1></div>
+     )
   }
 })
 
-var HelloWorld = (
-  div( null,
-    React.createElement(Title, {title: 'Hello World Class'})
-  )
-)
+var HelloWorld = (<div><Title title="Hello JSX!" /></div>)
 
 ReactDOM.render(HelloWorld, document.getElementById('app'))
