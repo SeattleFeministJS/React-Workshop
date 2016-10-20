@@ -24,8 +24,11 @@ body {
   h6 { font-size: $h6-size; }
 }
 
-
-
 .app {
-  margin: $margin-base;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #836997;
 }
