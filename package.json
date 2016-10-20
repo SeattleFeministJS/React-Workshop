@@ -25,6 +25,8 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.22.0",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-calc": "^5.3.1",
     "postcss-cssnext": "^2.8.0",
