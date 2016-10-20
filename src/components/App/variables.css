@@ -1,0 +1,25 @@
+$font-family: 'Open Sans', sans-serif;
+$font-base: 14px;
+
+$font-ratio: 1.33;
+
+$h1-size: modular-rem($font-ratio, 5);
+$h2-size: modular-rem($font-ratio, 4);
+$h3-size: modular-rem($font-ratio, 3);
+$h4-size: modular-rem($font-ratio, 2);
+$h5-size: modular-rem($font-ratio, 1);
+$h6-size: modular-rem($font-ratio, 0);
+
+
+$text-color: rgba(51, 51, 51, .9);
+$link-color: #f44242;
+$hover-color: #d15959;
+
+$margin-base: 16px;
+
+$border-color: #e9e9e9;
+$button-border-radius: 30px;
+
+$desktop-break: 64em;
+$tablet-break: 52em;
+$mobile-break: 40em;

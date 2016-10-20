@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Title from './title'
+import App from './components/App/App'
 
-var HelloWorld = (<div><Title title="Hello JSX!" /></div>)
+const HelloWorld = (<div><h1>Hello CSS</h1></div>)
 
-ReactDOM.render(HelloWorld, document.getElementById('app'))
+ReactDOM.render(<App>{HelloWorld}</App>, document.getElementById('app'))
