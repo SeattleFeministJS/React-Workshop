@@ -48,7 +48,7 @@ export default class Form extends Component {
 	    		<option value="Excited">Excited</option>
 	  		</select>
   		</label>
-      <label>Check this box if you're learning React.js
+      <label>Check this box if you&#39;re learning React.js
         <input 
           type="checkbox" 
           onChange={this.updateLearningReact}
