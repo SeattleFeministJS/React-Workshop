@@ -10,7 +10,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className={s.app} id='animate'>{this.props.children}</div>
+      <div className={s.app}>{this.props.children}</div>
      )
   }
 }
