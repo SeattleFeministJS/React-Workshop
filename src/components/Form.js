@@ -6,16 +6,21 @@ export default class Form extends Component {
     super(props);
     this.state = {
     	name: '',
-    	feeling: 'Contemplative'
+    	feeling: 'Contemplative',
+    	learningReact: true
     };
     this.updateName = this.updateName.bind(this);
     this.updateFeeling = this.updateFeeling.bind(this);
+    this.updateLearningReact = this.updateLearningReact.bind(this);
   }
   updateName(e) {
   	this.setState({ name: e.target.value });
   }
   updateFeeling(e) {
   	this.setState({ feeling: e.target.value })
+  }
+  updateLearningReact(e) {
+  	this.setState({ learningReact: e.target.checked })
   }
   render() {
     return <form>
@@ -40,6 +45,8 @@ export default class Form extends Component {
       <label>Check this box if you're learning React.js
         <input 
           type="checkbox" 
+          onChange={this.updateLearningReact}
+          checked={this.state.learningReact}
       	/>
       </label>
       <button>
