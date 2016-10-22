@@ -12,6 +12,7 @@ export default class Form extends Component {
     this.updateName = this.updateName.bind(this);
     this.updateFeeling = this.updateFeeling.bind(this);
     this.updateLearningReact = this.updateLearningReact.bind(this);
+    this.submitHandler = this.submitHandler.bind(this);
   }
   updateName(e) {
   	this.setState({ name: e.target.value });
@@ -22,8 +23,13 @@ export default class Form extends Component {
   updateLearningReact(e) {
   	this.setState({ learningReact: e.target.checked })
   }
+  submitHandler(e) {
+  	e.preventDefault();
+  	console.dir(this.state);
+  	// TODO: submit what is in state to the login process
+  }
   render() {
-    return <form>
+    return <form onSubmit={this.submitHandler}>
       <div>Please sign up!</div>
       <input 
       	type="text" 
@@ -49,7 +55,7 @@ export default class Form extends Component {
           checked={this.state.learningReact}
       	/>
       </label>
-      <button>
+      <button onClick={this.submitHandler}>
         Sign Me Up
       </button>
     </form>;
