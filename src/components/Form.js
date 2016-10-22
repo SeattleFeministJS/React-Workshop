@@ -5,12 +5,17 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    	name: ''
+    	name: '',
+    	feeling: 'Contemplative'
     };
     this.updateName = this.updateName.bind(this);
+    this.updateFeeling = this.updateFeeling.bind(this);
   }
   updateName(e) {
   	this.setState({ name: e.target.value });
+  }
+  updateFeeling(e) {
+  	this.setState({ feeling: e.target.value })
   }
   render() {
     return <form>
@@ -22,7 +27,11 @@ export default class Form extends Component {
       	value={this.state.name}
     	/>
       <label htmlFor="feelings">How are you feeling today?
-	      <select id="feelings">
+	      <select 
+	      	id="feelings"
+	      	onChange={this.updateFeeling}
+	      	selected={this.state.feeling}
+      	>
 	    		<option value="Contemplative">Contemplative</option>
 	    		<option value="Sleepy">Sleepy</option>
 	    		<option value="Excited">Excited</option>
