@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App/App'
+import Form from './components/Form'
 
-const HelloWorld = (<div><h1>Hello CSS <i className="em em-heart_eyes"></i></h1></div>)
+const LoginForm = (<Form/>)
 
-ReactDOM.render(<App>{HelloWorld}</App>, document.getElementById('app'))
+ReactDOM.render(<App>{LoginForm}</App>, document.getElementById('app'))
