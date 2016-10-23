@@ -11,39 +11,6 @@
     width: 21px;
     display: inline-block;
   }
-
-  button {
-    outline : none;
-    display: inline-block;
-    padding: 8px 30px;
-    width: 136px;
-    font-size: $font-base;
-    line-height: 1.5;
-    font-weight: 700;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    border: 1px solid #666;
-    background: #fff;
-    color: $text-color;
-    transition: all .2s ease;
-    text-decoration: none !important;
-    min-width: 120px;
-
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-
-    &:disabled, &.disabled {
-      opacity: .5;
-      cursor: default;
-    }
-  }
-
 }
 
 
