@@ -14,3 +14,15 @@
 }
 
 
+.mail {
+  width: 400px;
+  float: left;
+  margin: 2rem 10px;
+  font-size: $h6-size;
+  font-weight: 700;
+  span {
+    position: relative;
+    top: -4px;
+    margin-right: .5rem;
+  }
+}

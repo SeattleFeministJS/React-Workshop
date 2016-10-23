@@ -1,6 +1,5 @@
 $font-family: 'Open Sans', sans-serif;
 $font-base: 14px;
-
 $font-ratio: 1.33;
 
 $h1-size: modular-rem($font-ratio, 5);

@@ -48,6 +48,14 @@ export default class Header extends Component {
 
     return (
       <header>
+        <div className={s.mail}>
+          { this.props.messages.length > 0 && this.state.isLoggedIn &&
+            <p>
+              <span><i className="em em-mailbox_with_mail"></i></span>
+              You have {this.props.messages.length} unread messages.
+            </p>
+          }
+        </div>
         <div className={s.user}>
           {button}
         </div>
