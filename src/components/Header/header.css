@@ -1,0 +1,28 @@
+@import '../App/variables.css';
+
+.user {
+  width: 100px;
+  float: right;
+  margin: 2rem 50px;
+  span {
+    position: relative;
+    top: -4px;
+    height:21px;
+    width: 21px;
+    display: inline-block;
+  }
+}
+
+
+.mail {
+  width: 400px;
+  float: left;
+  margin: 2rem 10px;
+  font-size: $h6-size;
+  font-weight: 700;
+  span {
+    position: relative;
+    top: -4px;
+    margin-right: .5rem;
+  }
+}

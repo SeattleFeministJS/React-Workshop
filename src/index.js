@@ -1,8 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App/App'
-import Form from './components/Form'
+import Header from './components/Header/Header'
+import Form from './components/Form/Form'
 
-const LoginForm = (<Form/>)
+const mail = [
+  'Hello from your mom',
+  'Postcards from the edge',
+  'What happens in Vegas ...'
+]
 
-ReactDOM.render(<App>{LoginForm}</App>, document.getElementById('app'))
+const content = (
+    <div>
+      <Header messages={mail}/>
+      <main>
+        <Form />
+      </main>
+    </div>
+)
+
+ReactDOM.render(<App>{content}</App>, document.getElementById('app'))
