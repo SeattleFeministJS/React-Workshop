@@ -1,0 +1,30 @@
+@import '../App/variables.css';
+
+.form {
+  form {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+      max-width: 30%;
+    }
+    > * {
+      margin: 2em;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: $h4-size;
+  }
+}
+
+.formControl {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}

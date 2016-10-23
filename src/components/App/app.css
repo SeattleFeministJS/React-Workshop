@@ -24,6 +24,17 @@ body {
   h6 { font-size: $h6-size; }
 }
 
+header {
+  width: 100%;
+  height: 80px;
+}
+
+main {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
 button {
     outline : none;
     display: inline-block;
@@ -37,7 +48,7 @@ button {
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    border-radius: 10px;
+    border-radius: $input-border-radius;
     text-transform: uppercase;
     border: 1px solid #666;
     background: #fff;
@@ -54,7 +65,44 @@ button {
       opacity: .5;
       cursor: default;
     }
+}
+
+label {
+  font-size: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+input[type=text], input[type=password], select {
+  height: 32px;
+  font-size: $font-base;
+  margin-left: .5rem;
+  padding: 5px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  font-size: $font-base;
+  line-height: 1.5;
+  background-image: none;
+  border: 1px solid $input-border-color;
+  border-radius: 10px;
+  color: $text-color;
+
+  placeholder {
+    color: $placeholder-color;
   }
+
+  &:focus {
+    background-color: #fff;
+  }
+
+  &:disabled, &.disabled {
+    color: $text-color-muted;
+  }
+}
 
 .app {
   position: absolute;
@@ -65,15 +113,14 @@ button {
   background: #cbcbcb;
 }
 
-form {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  button {
-    max-width: 30%;
+:global {
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
   }
-  > * {
-    margin: 2em;
+  .clearfix:after {
+    clear: both;
   }
 }
+
+

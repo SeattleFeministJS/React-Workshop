@@ -47,7 +47,7 @@ export default class Header extends Component {
     }
 
     return (
-      <header>
+      <header className="clearfix">
         <div className={s.mail}>
           { this.props.messages.length > 0 && this.state.isLoggedIn &&
             <p>

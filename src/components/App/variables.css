@@ -22,3 +22,7 @@ $button-border-radius: 30px;
 $desktop-break: 64em;
 $tablet-break: 52em;
 $mobile-break: 40em;
+
+
+$input-border-color: #666;
+$input-border-radius: 10px;
