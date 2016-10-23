@@ -1,22 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App/App'
-import Header from './components/Header/Header'
-import Form from './components/Form/Form'
+import Root from './containers/Root'
+import Home from './containers/Home'
+import Signup from './containers/Signup'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
-const mail = [
-  'Hello from your mom',
-  'Postcards from the edge',
-  'What happens in Vegas ...'
-]
 
-const content = (
-    <div>
-      <Header messages={mail}/>
-      <main>
-        <Form />
-      </main>
-    </div>
-)
 
-ReactDOM.render(<App>{content}</App>, document.getElementById('app'))
+ReactDOM.render((
+   <Router history={browserHistory}>
+    <Route path="/" component={Root}>
+      <IndexRoute component={Home} />
+      <Route path="signup" component={Signup} />
+    </Route>
+  </Router>
+), document.getElementById('app'))
+
+
