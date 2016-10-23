@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App/App'
+import Header from './components/Header/Header'
 
-const HelloWorld = (<div><h1>Hello CSS <i className="em em-heart_eyes"></i></h1></div>)
-
-ReactDOM.render(<App>{HelloWorld}</App>, document.getElementById('app'))
+ReactDOM.render(<App><Header /></App>, document.getElementById('app'))
