@@ -5,8 +5,6 @@ import Home from './containers/Home'
 import Signup from './containers/Signup'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
-
-
 ReactDOM.render((
    <Router history={browserHistory}>
     <Route path="/" component={Root}>
