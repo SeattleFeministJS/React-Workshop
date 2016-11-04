@@ -1,5 +1,10 @@
 @import '../App/variables.css';
 
+.top {
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
 .user {
   width: 100px;
   float: right;
@@ -13,6 +18,9 @@
   }
 }
 
+.active {
+  color: #F300D5;
+}
 
 .mail {
   width: 400px;
@@ -24,5 +32,21 @@
     position: relative;
     top: -4px;
     margin-right: .5rem;
+  }
+}
+
+nav {
+  background: #88B3A4;
+  li {
+    display: inline-block;
+    margin: 1rem 0 1rem 1rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size:$h6-size;
+      &:hover {
+        color: #D3D7D7;
+      }
+    }
   }
 }

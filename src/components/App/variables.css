@@ -11,8 +11,8 @@ $h6-size: modular-rem($font-ratio, 0);
 
 
 $text-color: rgba(51, 51, 51, .9);
-$link-color: #f44242;
-$hover-color: #d15959;
+$link-color: #F300D5;
+$hover-color: #5B00D2;
 
 $margin-base: 16px;
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import s from './header.css'
+import { IndexLink, Link } from 'react-router'
 
 
 function LoginButton(props) {
@@ -48,7 +49,14 @@ export default class Header extends Component {
 
     return (
       <header className="clearfix">
-        <div className={s.mail}>
+      <nav>
+        <ul>
+          <li><IndexLink to="/"  activeStyle={{ color: '#F300D5' }} >Home</IndexLink></li>
+          <li><Link to="signup" activeClassName={s.active}>Signup</Link></li>
+        </ul>
+      </nav>
+        <div className={s.top}>
+          <div className={s.mail}>
           { this.props.messages.length > 0 && this.state.isLoggedIn &&
             <p>
               <span><i className="em em-mailbox_with_mail"></i></span>
@@ -60,6 +68,7 @@ export default class Header extends Component {
         <div className={s.user}>
           {button}
         </div>
+      </div>
       </header>
     )
   }

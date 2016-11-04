@@ -11,8 +11,10 @@ module.exports = {
   output: {
     path: assetPath,
     filename: 'bundle.js',
-    publicPath: ''
+    publicPath: '',
+    historyApiFallback: true
   },
+  devServer: { inline: true },
   resolve: {
     modules: ['node_modules', 'src'],
     extensions: ['', '.js', '.jsx', '.json']
