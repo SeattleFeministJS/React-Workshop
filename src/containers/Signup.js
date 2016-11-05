@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Form from '../components/Form/Form'
 import Header from '../components/Header/Header'
 import { connect } from 'react-redux'
-import { logIn } from '../redux'
+import { logIn, logOut } from '../redux'
 
 const mail = [
   'Hello from your mom',
@@ -15,9 +15,11 @@ class Signup extends Component {
   render(){
     return (
      <div>
-      <Header messages={mail}
+       <Header messages={mail}
           isLoggedIn={this.props.loggedIn}
-          handleLoginClick={this.props.onLogIn.bind(this)}/>
+          handleLoginClick={this.props.onLogIn.bind(this)}
+          handleLogoutClick={this.props.onLogOut.bind(this)}
+        />
       <Form />
      </div>
     )
@@ -35,7 +37,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onLogIn: () => {
-      dispatch(logIn())
+      dispatch(logIn(true))
+    },
+    onLogOut: () => {
+      dispatch(logOut())
     }
   }
 }
