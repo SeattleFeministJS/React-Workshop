@@ -11,13 +11,16 @@ const mail = [
 ]
 
 class Home extends Component {
+
   render() {
 
     console.log('HOME props.loggedIn', this.props.loggedIn)
 
     return (
       <div>
-        <Header messages={mail} />
+        <Header messages={mail}
+          isLoggedIn={this.props.loggedIn}
+          handleLoginClick={this.props.onLogIn.bind(this)}/>
         <h1>Home</h1>
         <p>This is the homepage, if you'd like to see our form click <Link to="signup">here</Link></p>
       </div>
@@ -35,7 +38,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onLogIn: () => {
-      dispatch(logIn())
+      dispatch(logIn(true))
     }
   }
 }
