@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import Header from '../components/Header/Header'
+import { connect } from 'react-redux'
+import { logIn } from '../redux'
 
 const mail = [
   'Hello from your mom',
@@ -8,8 +10,11 @@ const mail = [
   'What happens in Vegas ...'
 ]
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
+
+    console.log('HOME props.loggedIn', this.props.loggedIn)
+
     return (
       <div>
         <Header messages={mail} />
@@ -19,3 +24,20 @@ export default class Home extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    loggedIn: state.loggedIn
+  }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLogIn: () => {
+      dispatch(logIn())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

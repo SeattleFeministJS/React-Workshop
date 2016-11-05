@@ -2,7 +2,7 @@
 const LOG_IN = 'LOG_IN'
 
 // action creator
-function logIn(loggedIn) {
+export function logIn(loggedIn) {
   // action
   return {
     type: LOG_IN,
