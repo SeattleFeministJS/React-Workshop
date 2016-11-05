@@ -6,7 +6,6 @@ export default class Root extends Component {
   render() {
     return (
       <App>
-
         <main>
           {this.props.children}
         </main>
